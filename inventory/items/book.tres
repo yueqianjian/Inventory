@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=4 format=3 uid="uid://gdk24lcwwyu7"]
+
+[ext_resource type="Script" path="res://inventory/inventory_item.gd" id="2_j0ofp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y7st4"]
+load_path = "res://.godot/imported/items.png-47d902c7b073dc8ecbdcf38de461db0f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuw10"]
+atlas = SubResource("CompressedTexture2D_y7st4")
+region = Rect2(32, 416, 32, 32)
+
+[resource]
+script = ExtResource("2_j0ofp")
+name = "book"
+value = 3
+icon = SubResource("AtlasTexture_uuw10")

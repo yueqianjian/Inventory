@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://di4da4j5hiybi"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_7ipyo"]
+[ext_resource type="Texture2D" uid="uid://bvu07hw7rgknv" path="res://icon.svg" id="1_ofcoy"]
+[ext_resource type="Script" path="res://scripts/pickup.gd" id="3_akqt7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mnsa2"]
+radius = 24.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h4wpd"]
+radius = 40.0
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_7ipyo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_ofcoy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mnsa2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.4, 1.4)
+
+[node name="Pickup" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("3_akqt7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
+shape = SubResource("CircleShape2D_h4wpd")
+
+[connection signal="area_entered" from="Pickup" to="Pickup" method="_on_area_entered"]

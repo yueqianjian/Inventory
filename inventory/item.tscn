@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm2hrr5j217no"]
+
+[ext_resource type="Texture2D" uid="uid://u0tnyxwemmm1" path="res://inventory/items.tres" id="1_wf4x6"]
+[ext_resource type="Script" path="res://inventory/item.gd" id="1_ypnym"]
+[ext_resource type="Script" path="res://scripts/pickupable.gd" id="3_ve5ji"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4fmgv"]
+radius = 16.0
+
+[node name="Item" type="Node2D"]
+script = ExtResource("1_ypnym")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wf4x6")
+
+[node name="Pickupable" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("3_ve5ji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickupable"]
+shape = SubResource("CircleShape2D_4fmgv")
+
+[connection signal="area_entered" from="Pickupable" to="Pickupable" method="_on_area_entered"]
