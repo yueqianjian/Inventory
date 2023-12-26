@@ -1,0 +1,205 @@
+[gd_scene load_steps=4 format=3 uid="uid://6h6shiqkllna"]
+
+[ext_resource type="Script" path="res://gui/bag.gd" id="1_3yv5b"]
+[ext_resource type="Texture2D" uid="uid://ditot6o87rgxf" path="res://assets/InventoryRect.png" id="1_xaqyl"]
+[ext_resource type="PackedScene" uid="uid://ct00vev667agj" path="res://gui/inventory_slot.tscn" id="2_q1elv"]
+
+[node name="Bag" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3yv5b")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -174.0
+offset_top = -189.0
+offset_right = 174.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xaqyl")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="ItemContainer" type="GridContainer" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+columns = 6
+
+[node name="InventorySlot" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot21" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot22" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot23" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot24" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot25" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot26" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot27" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot28" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot29" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot30" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot31" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot32" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot33" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot34" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot35" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot36" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot37" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot38" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot39" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot40" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot41" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot42" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot43" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot44" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot45" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot46" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot47" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2
+
+[node name="InventorySlot48" parent="NinePatchRect/ScrollContainer/VBoxContainer/MarginContainer/ItemContainer" instance=ExtResource("2_q1elv")]
+layout_mode = 2

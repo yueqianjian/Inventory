@@ -1,6 +1,14 @@
 extends CharacterBody2D
 
+@onready var pickup = $Pickup
+
+const BAG_INVENTORY = preload("res://inventory/bagInventory.tres")
+
 var currentSpeed = 300.0
+
+
+func _ready():
+	pickup.pickup.connect(on_pickup)
 
 
 func _physics_process(delta):
@@ -16,3 +24,7 @@ func move():
 		velocity = Vector2.ZERO
 
 	move_and_slide()
+
+
+func on_pickup(item: InventoryItem):
+	BAG_INVENTORY.add(item)

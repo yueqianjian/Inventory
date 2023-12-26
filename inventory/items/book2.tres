@@ -11,6 +11,6 @@ region = Rect2(64, 416, 32, 32)
 
 [resource]
 script = ExtResource("1_ulejn")
-name = "apple"
+name = "book2"
 value = 3
 icon = SubResource("AtlasTexture_jjs8i")

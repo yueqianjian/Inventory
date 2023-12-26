@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvob5lc76i3ge"]
+[gd_scene load_steps=7 format=3 uid="uid://dvob5lc76i3ge"]
 
 [ext_resource type="Texture2D" uid="uid://b0xasgn274by6" path="res://assets/base_map.png" id="1_1q6nf"]
 [ext_resource type="PackedScene" uid="uid://di4da4j5hiybi" path="res://scenes/player.tscn" id="2_jcbu5"]
 [ext_resource type="PackedScene" uid="uid://c4ld51uhsqa2p" path="res://gui/gui.tscn" id="3_0erls"]
+[ext_resource type="PackedScene" uid="uid://6h6shiqkllna" path="res://gui/bag.tscn" id="4_t0pdr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pevlv"]
 texture = ExtResource("1_1q6nf")
@@ -38,5 +39,8 @@ layer_0/tile_data = PackedInt32Array(-983063, 131072, 2, -917527, 131072, 2, -85
 [node name="Player" parent="." groups=["player"] instance=ExtResource("2_jcbu5")]
 
 [node name="Gui" parent="." instance=ExtResource("3_0erls")]
+
+[node name="InventoryGui" parent="Gui" instance=ExtResource("4_t0pdr")]
+visible = false
 
 [node name="Items" type="Node2D" parent="." groups=["items"]]

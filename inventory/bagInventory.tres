@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://cl02bpxxmi0yr"]
+
+[ext_resource type="Script" path="res://inventory/inventory.gd" id="1_u5rxd"]
+[ext_resource type="Resource" uid="uid://37ghkl4jrkvc" path="res://inventory/items/apple.tres" id="2_csef1"]
+[ext_resource type="Script" path="res://inventory/inventory_slot.gd" id="3_8fpkw"]
+
+[sub_resource type="Resource" id="Resource_ppesn"]
+script = ExtResource("3_8fpkw")
+item = ExtResource("2_csef1")
+count = 1
+
+[resource]
+script = ExtResource("1_u5rxd")
+slots = Array[ExtResource("3_8fpkw")]([SubResource("Resource_ppesn")])
+maxStackSize = 99
