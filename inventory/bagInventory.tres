@@ -1,15 +1,21 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://cl02bpxxmi0yr"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=7 format=3 uid="uid://cl02bpxxmi0yr"]
 
 [ext_resource type="Script" path="res://inventory/inventory.gd" id="1_u5rxd"]
 [ext_resource type="Resource" uid="uid://37ghkl4jrkvc" path="res://inventory/items/apple.tres" id="2_csef1"]
 [ext_resource type="Script" path="res://inventory/inventory_slot.gd" id="3_8fpkw"]
+[ext_resource type="Resource" uid="uid://gdk24lcwwyu7" path="res://inventory/items/book.tres" id="4_41hds"]
 
 [sub_resource type="Resource" id="Resource_ppesn"]
 script = ExtResource("3_8fpkw")
 item = ExtResource("2_csef1")
 count = 1
 
+[sub_resource type="Resource" id="Resource_pgm37"]
+script = ExtResource("3_8fpkw")
+item = ExtResource("4_41hds")
+count = 2
+
 [resource]
 script = ExtResource("1_u5rxd")
-slots = Array[ExtResource("3_8fpkw")]([SubResource("Resource_ppesn")])
+slots = Array[ExtResource("3_8fpkw")]([SubResource("Resource_ppesn"), SubResource("Resource_pgm37")])
 maxStackSize = 99

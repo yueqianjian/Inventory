@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvob5lc76i3ge"]
+[gd_scene load_steps=9 format=3 uid="uid://dvob5lc76i3ge"]
 
 [ext_resource type="Texture2D" uid="uid://b0xasgn274by6" path="res://assets/base_map.png" id="1_1q6nf"]
 [ext_resource type="PackedScene" uid="uid://di4da4j5hiybi" path="res://scenes/player.tscn" id="2_jcbu5"]
 [ext_resource type="PackedScene" uid="uid://c4ld51uhsqa2p" path="res://gui/gui.tscn" id="3_0erls"]
+[ext_resource type="Script" path="res://scenes/InventoriesContainer.gd" id="4_lyaug"]
 [ext_resource type="PackedScene" uid="uid://6h6shiqkllna" path="res://gui/bag.tscn" id="4_t0pdr"]
+[ext_resource type="PackedScene" uid="uid://4bm60hweuhnx" path="res://gui/inventory_cell.tscn" id="6_okrhp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pevlv"]
 texture = ExtResource("1_1q6nf")
@@ -40,7 +42,24 @@ layer_0/tile_data = PackedInt32Array(-983063, 131072, 2, -917527, 131072, 2, -85
 
 [node name="Gui" parent="." instance=ExtResource("3_0erls")]
 
-[node name="InventoryGui" parent="Gui" instance=ExtResource("4_t0pdr")]
+[node name="InventoriesContainer" type="Panel" parent="Gui" groups=["InventoriesContainer"]]
 visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_lyaug")
+
+[node name="InventoryGui" parent="Gui/InventoriesContainer" instance=ExtResource("4_t0pdr")]
+visible = false
+layout_mode = 1
+
+[node name="InventoryCell" parent="Gui/InventoriesContainer" instance=ExtResource("6_okrhp")]
+visible = false
+layout_mode = 0
+offset_right = 9.0
+offset_bottom = 31.0
+mouse_filter = 2
 
 [node name="Items" type="Node2D" parent="." groups=["items"]]

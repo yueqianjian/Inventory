@@ -14,11 +14,6 @@ func _ready():
 	BAG_INVENTORY.init(itemSlots.size())
 
 
-func _input(event: InputEvent):
-	if event.is_action_pressed("bag"):
-		visible = !visible
-
-
 func update():
 	for i in min(itemSlots.size(), slots.size()):
 		itemSlots[i].itemSlot = slots[i]
